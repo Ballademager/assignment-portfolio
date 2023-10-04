@@ -1,4 +1,105 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
+/* --- FF --- */
+/* font-family: 'Anton', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Koulen', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Six Caps', sans-serif; */
+
+/* :root */
+:root {
+  /* colors */
+  --primary-1: #f0f0f0;
+  --primary-2: #d4ced3;
+  --primary-3: #f9e8f6;
+  --secondary-1: #3e1939;
+  --secondary-2: #712266;
+  --secondary-3: #;
+  --accent-1: #366f70;
+  --accent-2: #09a4a7;
+  --accent-3: #4fc4c5;
+  --accent-alt: #ff4a9a;
+  --dark: #1f0404;
+  --gradient-stop-1: #dfb0d9;
+
+  /* spaces for margins and paddings */
+  --space-xxs: calc(var(--space-sm) * 0.25);
+  --space-xs: calc(var(--space-sm) * 0.5);
+  --space-sm: 1rem;
+  --space-md: calc(var(--space-sm) * 1.5);
+  --space-lg: calc(var(--space-sm) * 2);
+  --space-xl: calc(var(--space-sm) * 3);
+  --space-xxl: calc(var(--space-sm) * 6);
+
+  /* font-families */
+  --ff-text: "Open Sans", sans-serif;
+  --ff-head: "Julius Sans One", sans-serif;
+
+  /* font-weights */
+  --fw-l: 300;
+  --fw-r: 400;
+  --fw-m: 500;
+  --fw-b: 700;
+
+  /* font-sizes */
+  --fs-n: 1rem;
+
+  --fs-p: 1rem;
+  --fs-h1: calc(var(--fs-p) * 5.653);
+  --fs-h2: calc(var(--fs-p) * 3.998rem);
+  --fs-h3: calc(var(--fs-p) * 2.827rem);
+  --fs-h4: calc(var(--fs-p) * 1.999rem);
+  --fs-h5: calc(var(--fs-p) * 1.414rem);
+
+  /* border-radii */
+  --br-xs: 2px;
+  --br-s: 5px;
+  --br-l: 10px;
+  --br-xl: 20px;
+  --br-xxl: 50px;
+}
+html {
+  font-size: 100%; /*er det her (16px)/korrekt*/
+}
+
+body {
+  background: var(--primary-1);
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  /* font-weight: 400; */
+  /* color: #1f0404; */
+}
+
+p {
+  font-size: var(--fs-p);
+}
+
+h1,
+h2 {
+  font-family: var(--ff-head);
+  line-height: 1.3;
+  /* font-weight: 400; */
+  /* margin: 3rem 0 1.38rem; */
+}
+h3,
+h4,
+h5 {
+  font-family: var(--ff-text);
+}
+h3 {
+  font-weight: 700;
+  font-size: var(--fs-h3);
+}
+h4 {
+  font-weight: 700;
+  font-size: var(--fs-h4);
+}
+
+h5 {
+  font-weight: 500;
+  font-size: var(--fs-h5);
+}
+
+small,
+.text_small {
+  font-size: 0.707rem;
 }
