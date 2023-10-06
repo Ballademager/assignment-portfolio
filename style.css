@@ -8,16 +8,16 @@ font-family: 'Six Caps', sans-serif; */
 /* :root */
 :root {
   /* colors */
-  --primary-1: #f0f0f0;
-  --primary-2: #f9e8f6;
-  --grey-1: #d4ced3;
-  --grey-2: #dcd4d4;
-  --secondary-1: #3e1939;
-  --secondary-2: #712266;
-  --secondary-3: #;
-  --accent-1: #366f70;
-  --accent-2: #09a4a7;
-  --accent-3: #4fc4c5;
+  --primary-1: #edf0f1;
+  --primary-2: #e7f4f5;
+  --grey-1: #ced4d4;
+  --grey-2: #d4dcdc;
+  --secondary-1: #366f70;
+  --secondary-2: #09a4a7;
+  --secondary-3: #4fc4c5;
+  --accent-1: #3e1939;
+  --accent-2: #712266;
+  --accent-3: #;
   --accent-alt: #ff4a9a;
   --dark: #1f0404;
   --gradient-stop-1: #dfb0d9;
@@ -105,10 +105,17 @@ h5 {
   font-weight: 500;
   font-size: var(--fs-h5);
 }
+.italien {
+  font-style: italic;
+  margin-top: 1rem;
+}
 
 ul {
   list-style: none;
   margin-block: 0;
+}
+.index {
+  padding: 2rem;
 }
 small,
 .text_small {
@@ -120,25 +127,27 @@ header {
   display: flex;
   justify-content: space-between;
   background: linear-gradient(in oklch 115deg, var(--secondary-2), var(--secondary-1));
-  /* padding-inline: 1rem; */
 }
-/* .blob {
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  translate: -60px -40px;
-  border-radius: 1e5px;
-  background: linear-gradient(-45deg in oklch, var(--secondary-1), #712867);
-} */
+
 header ul {
   margin-block: 2rem 1rem;
   margin-inline-end: 1rem;
   display: flex;
   gap: 1rem;
 }
+
+@media (width < 485px) {
+  .blob {
+    display: none;
+  }
+  header ul {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+}
 header li {
-  color: var(--primary-1);
-  background: linear-gradient(in oklch 90deg, var(--accent-1), var(--accent-alt));
+  color: var(--dark);
+  background: linear-gradient(in oklch 90deg, var(--accent-alt), var(--secondary-3));
   font-weight: var(--fw-m);
   /* border: 1px solid var(--primary-1); */
   padding: 3px 15px;
@@ -149,9 +158,86 @@ section {
 }
 
 section {
-  background-color: #da9e9e;
+  /* background-color: #da9e9e; */
   gap: 10px;
   padding: 1rem;
+}
+/* ------ colortester/style tile ------ */
+.color1 {
+  background-color: var(--primary-1);
+}
+.color2 {
+  background-color: var(--primary-2);
+}
+.color3 {
+  background-color: var(--secondary-1);
+}
+.color4 {
+  background-color: var(--secondary-2);
+}
+.grey1 {
+  background-color: var(--grey-1);
+}
+.grey2 {
+  background-color: var(--grey-2);
+  border: 1px solid var(--dark);
+  border-top: 0px;
+}
+.color5 {
+  background-color: var(--accent-alt);
+}
+.color6 {
+  background-color: var(--accent-2);
+}
+
+.colorbox {
+  min-width: 2rem;
+  min-height: 2rem;
+  width: 10vh;
+  height: 10vh;
+}
+
+#colors {
+  display: grid;
+  /* align-items: top; */
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-gap: 4.2rem;
+  background: var(--grey-2);
+}
+.colors_head {
+  place-self: center start;
+}
+#colors article {
+  margin-block: 2.1rem;
+}
+
+#samples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.percent100 {
+  width: 100%;
+  height: 20vh;
+  min-height: 4.2rem;
+}
+
+.percent100 div {
+  float: left;
+}
+
+.percent30 {
+  width: 30%;
+  height: 100%;
+}
+.percent15 {
+  width: 15%;
+  height: 100%;
+}
+.percent5 {
+  width: 5%;
+  height: 100%;
 }
 
 /* #tests {
